@@ -1,1 +1,0 @@
-[![Build Status](https://app.travis-ci.com/Kmatulud/taxi-trips.svg?branch=main)](https://app.travis-ci.com/Kmatulud/taxi-trips)
