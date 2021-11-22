@@ -26,6 +26,9 @@ module.exports = async function TaxiTrips() {
     async function findTotalIncomeByRegion(){
         
     }
+    async function deleteTaxiData(){
+        // await pool.query('delete from fruit_basket');
+    }
     return {
         totalTripCount,
         findAllRegions,
@@ -35,6 +38,7 @@ module.exports = async function TaxiTrips() {
         findTotalIncomePerTaxi,
         findTotalIncome,
         findTotalIncomeByRegion,
-        findTaxisForRegion
+        findTaxisForRegion,
+        deleteTaxiData
     }
 }

@@ -3,17 +3,18 @@ let TaxiTrips = require("../taxi-trips");
 const pg = require("pg");
 const Pool = pg.Pool;
 
-const connectionString = process.env.DATABASE_URL || 'postgresql://postgres:3201@localhost:5432/my_taxitrips_tests';
+const connectionString = process.env.DATABASE_URL || 'postgresql://postgres:3201@localhost:5432/my_taxitrips_tests'
 
 const pool = new Pool({
     connectionString
 });
+const taxiTrips = TaxiTrips(pool);
 
 describe('Taxi Trips', function () {
 
-    // beforeEach(async function () {
-        
-    // });
+    beforeEach(async function(){
+        await taxiTrips.deleteTaxiData();
+    })
 
     it('should find how many trips all the taxis made', async function () {
 
