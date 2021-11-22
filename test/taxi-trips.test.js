@@ -13,7 +13,7 @@ const taxiTrips = TaxiTrips(pool);
 describe('Taxi Trips', function () {
 
     beforeEach(async function(){
-        await taxiTrips.deleteTaxiData();
+        // await taxiTrips.deleteTaxiData();
     })
 
     it('should find how many trips all the taxis made', async function () {
