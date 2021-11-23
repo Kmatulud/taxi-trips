@@ -4,7 +4,7 @@ module.exports = async function TaxiTrips() {
         return info.rows[0].count;
     }
     async function findAllRegions(){
-        let info = await pool.query('select region_name from trip from region');
+        let info = await pool.query('select region_name from region');
         return info.rows;
     }
     async function findTaxisForRegion(){
