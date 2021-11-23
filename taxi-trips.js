@@ -1,9 +1,11 @@
 module.exports = async function TaxiTrips() {
     async function totalTripCount(){
-
+        let info = await pool.query('select count(*) from trip');
+        return info.rows[0].count;
     }
     async function findAllRegions(){
-
+        let info = await pool.query('select region_name from trip from region');
+        return info.rows;
     }
     async function findTaxisForRegion(){
 
